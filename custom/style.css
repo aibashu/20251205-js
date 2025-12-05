@@ -1,4 +1,4 @@
-@charset "utf";
+@charset "utf"-8;
 
 
 
@@ -55,4 +55,5 @@
 .marquee-paused {
   animation-play-state: paused;
 }
+
 
