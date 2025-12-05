@@ -1,7 +1,5 @@
 @charset "utf"-8;
 
-
-
 .marquee-container {
     display: flex;
     position: relative;
@@ -55,5 +53,6 @@
 .marquee-paused {
   animation-play-state: paused;
 }
+
 
 
