@@ -1,0 +1,58 @@
+@charset "utf";
+
+
+
+.marquee-container {
+    display: flex;
+    position: relative;
+    background-color: rgba(255, 159, 5, 0.826);
+}
+
+.marquee-inner {
+    display: flex;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee-inner img{
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+@keyframes marquee {
+    0% {
+        translate: 0;
+    }
+
+    100% {
+        translate: -100%;
+    }
+}
+
+/*応用編：画像をホバーすると動きが止まり拡大する*/
+
+.marquee-inner-stop{
+    display: flex;
+    animation: marquee 15s linear infinite;
+   
+}
+
+.marquee-inner-stop img{
+    transition: scale .4s;
+     object-fit: cover;
+     width: 225px;
+     height: 225px;
+}
+
+.marquee-inner-stop:has(img:hover){
+    z-index: 2;
+}
+
+.marquee-inner-stop img:hover{
+    scale: 1.1;
+}
+
+/*停止時のクラス*/
+.marquee-paused {
+  animation-play-state: paused;
+}
+
